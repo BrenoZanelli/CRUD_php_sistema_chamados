@@ -1,0 +1,8 @@
+<?php
+
+$DB_HOST = "mysql";
+$DB_USER = "root";
+$DB_PASSWORD = "root";
+$DB_NAME = "sistema_chamados";
+
+?>
