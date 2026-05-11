@@ -23,3 +23,6 @@ $conn->close();
 
 echo "<a href='index.php'>Voltar</a>";
 ?>
+<a href="excluir.php?id=<?php echo $row['id']; ?>" 
+   class="btn btn-danger btn-sm" 
+   onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>

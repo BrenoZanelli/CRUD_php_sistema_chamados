@@ -7,12 +7,11 @@ if (isset($_POST['titulo'])) {
     $prioridade = $_POST['prioridade'];
     $status = $_POST['status'];
 
-    // O SQL precisa incluir todos os campos agora
     $sql = "INSERT INTO chamados (titulo, descricao, prioridade, status) 
             VALUES ('$titulo', '$descricao', '$prioridade', '$status')";
     
     if ($conn->query($sql) === TRUE) {
-        header("Location: lista.php"); // Redireciona direto para a lista
+        header("Location: lista.php");
     } else {
         echo "Erro: " . $conn->error;
     }
