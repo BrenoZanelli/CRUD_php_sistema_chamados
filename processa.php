@@ -1,18 +1,21 @@
 <?php
-
 include 'conect2.php';
 
-if (isset($_POST['titulo'])){
-
+if (isset($_POST['titulo'])) {
     $titulo = $_POST['titulo'];
+    $descricao = $_POST['descricao'];
+    $prioridade = $_POST['prioridade'];
+    $status = $_POST['status'];
 
-    $sql = "INSERT INTO chamados (titulo) VALUES ('$titulo')";
+    // O SQL precisa incluir todos os campos agora
+    $sql = "INSERT INTO chamados (titulo, descricao, prioridade, status) 
+            VALUES ('$titulo', '$descricao', '$prioridade', '$status')";
     
     if ($conn->query($sql) === TRUE) {
-        echo "Novo chamado criado com sucesso";
+        header("Location: lista.php"); // Redireciona direto para a lista
     } else {
-        echo "Erro: " . $sql . "<br>" . $conn->error;
+        echo "Erro: " . $conn->error;
     }
-
     $conn->close();
 }
+?>

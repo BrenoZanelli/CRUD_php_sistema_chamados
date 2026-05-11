@@ -12,8 +12,8 @@ if ($result->num_rows > 0){
         echo " - Descrição: " .$row["descricao"] . "<br>";
         echo " - Prioridade: " .$row["prioridade"] . "<br>";
         echo " - Status: " .$row["status"] ."<br>";
-        echo "<a href='editar.php?id=" .$row["titulo"]. "'>Editar</a> | ";
-        echo "<a href='excluir.php?id=" .$row["titulo"]. "'>Excluir</a> | ";
+        echo "<a href='editar.php?id=" .$row["id"]. "'>Editar</a> | ";
+        echo "<a href='excluir.php?id=" .$row["id"]. "'>Excluir</a> | ";
         echo "<br>";
     }
 }else {
