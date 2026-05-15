@@ -3,49 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Novo Chamado - Sistema de Help Desk</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="m-2">
-        <h1>FORMULARIO DE CADASTRO</h1>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow border-0">
+                    <div class="card-header bg-primary text-white p-3">
+                        <h2 class="mb-0 h4">Abrir Novo Chamado</h2>
+                    </div>
+                    
+                    <div class="card-body p-4">
+                        <form action="processa.php" method="post">
+                            
+                            <div class="mb-3">
+                                <label for="titulo" class="form-label fw-bold">1. Título do Problema:</label>
+                                <input type="text" class="form-control" name="titulo" placeholder="Ex: Erro ao acessar o sistema" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="descricao" class="form-label fw-bold">2. Descrição Detalhada:</label>
+                                <textarea class="form-control" name="descricao" rows="4" placeholder="Descreva o que está acontecendo..."></textarea>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="prioridade" class="form-label fw-bold">3. Prioridade:</label>
+                                    <select name="prioridade" class="form-select">
+                                        <option value="baixa">Baixa</option>
+                                        <option value="media" selected>Média</option>
+                                        <option value="alta">Alta</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col-md-6 mb-3">
+                                    <label for="status" class="form-label fw-bold">4. Status Inicial:</label>
+                                    <select name="status" class="form-select">
+                                        <option value="aberto" selected>Aberto</option>
+                                        <option value="andamento">Em andamento</option>
+                                        <option value="fechado">Fechado</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+                                <a href="lista.php" class="btn btn-outline-secondary me-md-2">Ver Lista de Chamados</a>
+                                <button type="submit" class="btn btn-primary px-4">Criar Chamado</button>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+                <p class="text-center text-muted mt-3 small">Sistema de Gerenciamento de Chamados v1.0</p>
+            </div>
+        </div>
     </div>
 
-    <form action="processa.php" method="post">
-        <div class="mt-5 container-fluid">
-            <label for="titulo" class="fw-bold">1- Digite o título:</label><br>
-            <input class="m-2" type="text" name="titulo"><br>
-        </div>
-        
-        <div class="mt-2 container-fluid">
-            <label for="descricao" class="fw-bold">2- Digite a descrição:</label><br>
-            <input class="m-2" type="text" name="descricao"><br>
-        </div>
-        
-        <div class="mt-2 container-fluid">
-            <p class="fw-bold">3- Escolha a prioridade:</p>
-            <input type="radio" name="prioridade" id="baixa" value="Baixa">
-            <label for="baixa" class="m-2">Baixa</label><br>
-            <input type="radio" name="prioridade" id="media" value="Média">
-            <label for="media" class="m-2">Média</label><br>
-            <input type="radio" name="prioridade" id="alta" value="Alta">
-            <label for="alta" class="m-2">Alta</label><br>
-        </div>
-        
-        <div class="mt-2 container-fluid">
-            <p class="fw-bold">4- Escolha o status:</p>
-            <input type="radio" name="status" id="andamento" value="Andamento">
-            <label for="andamento" class="m-2">Em andamento</label><br>
-            <input type="radio" name="status" id="fechado" value="Fechado">
-            <label for="fechado" class="m-2">Fechado</label><br>
-            <input type="radio" name="status" id="aberto" value="Aberto">
-            <label for="aberto" class="m-2">Aberto</label><br>
-            <input type="submit" value="Enviar" class="mt-3 btn btn-primary">
-        </div>
-        
-    </form>
-    <br>
-    <span class="fw-bold m-2">Clique aqui para acessar a lista de chamados: </span>   
-    <a href="lista.php" class="text-decoration-none btn btn-info">Lista de Chamados</a>
 </body>
 </html>
