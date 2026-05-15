@@ -17,10 +17,13 @@
                     </div>
                     
                     <div class="card-body p-4">
+
+                        <!--define quais dados vao ser enviados para o processa.php usando o metodo POST para esconder do usuário-->
                         <form action="processa.php" method="post">
                             
                             <div class="mb-3">
                                 <label for="titulo" class="form-label fw-bold">1. Título do Problema:</label>
+                                <!-- o name é o que o php vai usar para identificar o dado-->
                                 <input type="text" class="form-control" name="titulo" placeholder="Ex: Erro ao acessar o sistema" required>
                             </div>
                             

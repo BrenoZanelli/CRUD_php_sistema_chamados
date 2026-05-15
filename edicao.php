@@ -1,6 +1,8 @@
 <?php
 include'conect2.php';
 if (isset($_GET['id'])){
+
+    //pega o id que vem na URL por exemplo edicao.php?id=5 para saber qual chamado pegar
     $id=$_GET['id'];
 
     $sql="SELECT * FROM chamados WHERE id = $id";

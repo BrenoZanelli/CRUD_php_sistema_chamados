@@ -1,6 +1,7 @@
 <?php
 include 'conect2.php';
 
+//comando SQL que seleciona todos os chamados e atribui a variavel "$sql"
 $sql = "SELECT * FROM chamados";
 $result = $conn->query($sql);
 ?>
@@ -30,7 +31,7 @@ $result = $conn->query($sql);
                         <th class="text-center">Ações</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody>   <!-- laço de repetição que percorre cada linha do banco, enquanto houver linhas ele adiciona a linha que ele está no html-->
                     <?php while ($row = $result->fetch_assoc()): ?>
                         <tr>
                             <td><?php echo $row['id']; ?></td>

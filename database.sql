@@ -1,5 +1,6 @@
 USE sistema_chamados;
 
+--cria o banco de dados se ele não existir
 CREATE TABLE IF NOT EXISTS chamados (
     id INT AUTO_INCREMENT PRIMARY KEY,
     titulo VARCHAR(100) NOT NULL,

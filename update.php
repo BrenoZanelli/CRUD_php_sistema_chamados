@@ -2,6 +2,8 @@
 include 'conect2.php';
 
 if (isset($_POST['id'])){
+
+    //pega o id que vem na URL por exemplo edicao.php?id=5 para saber qual chamado pegar
     $id=$_POST['id'];
     $titulo=$_POST['titulo'];
     $descricao = $_POST['descricao'];

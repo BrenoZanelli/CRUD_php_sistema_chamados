@@ -1,0 +1,8 @@
+esse foi um projeto CRUD criado por Breno de Oliveira Martins da Silva e Renan Melo Hara para a disciplina de programação web
+
+COMO TESTAR:
+    1- entre pelo terminal na pasta do projeto, e suba o conteiner docker com o comando "docker compose up -d"
+
+    2- pelo navegador de sua preferencia, digite "http://localhost:8080/index.php"
+
+        caso esteja usando a porta no momento para outra finalidade, o projeto pode não rodar
